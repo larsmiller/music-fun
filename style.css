@@ -1,0 +1,88 @@
+body {
+  font-family: "Bungee Tint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  background: #ececec;
+}
+#music-player-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.top-stuff {
+  background: #7c7c7c;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12,1fr);
+}
+#midi-file-selector {
+  grid-column: 1 / 6;
+}
+#person-selector {
+  grid-column: 6 / 11;
+  /* display: none; */
+}
+#stop-button {
+  grid-column: 11 / 13;
+  /* display: none; */
+}
+select {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-family: "Bungee Tint", sans-serif;
+}
+#piano {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 1rem;
+}
+@media (min-width:400px) {
+  #piano {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+@media (min-width:700px) {
+  #piano {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+@media (min-width:900px) {
+  #piano {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+.key {
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.lars .key {
+  background-image: url('img/lars-1.jpg');
+}
+.lars .key.active {
+  background-image: url('img/lars-2.jpg');
+}
+.boston .key {
+  background-image: url('img/boston-1.jpg');
+}
+.boston .key.active {
+  background-image: url('img/boston-2.jpg');
+}
+.charley .key {
+  background-image: url('img/charley-1.jpg');
+}
+.charley .key.active {
+  background-image: url('img/charley-2.jpg');
+}
+.beth .key {
+  background-image: url('img/beth-1.jpg');
+}
+.beth .key.active {
+  background-image: url('img/beth-2.jpg');
+}
